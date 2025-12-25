@@ -1,215 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EdgeScale Systems | Edge AI Computing</title>
+<!-- Navigation -->
+<nav class="p-6 flex justify-between items-center border-b border-gray-800">
+    <div class="text-2xl font-bold tracking-tighter text-white">
+        EDGE<span class="text-cyan-400">SCALE</span>
+    </div>
+    <div class="space-x-8 hidden md:flex text-sm uppercase tracking-widest">
+        <a href="#" class="hover:text-cyan-400 transition">Solutions</a>
+        <a href="#" class="hover:text-cyan-400 transition text-cyan-400">Hardware</a>
+        <a href="#" class="hover:text-cyan-400 transition">About</a>
+        <a href="#" class="px-4 py-2 bg-cyan-500 text-black font-bold rounded">Get Quote</a>
+    </div>
+</nav>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0b0f1a;
-      color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url("https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 120px 40px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .section {
-      padding: 80px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section h3 {
-      font-size: 28px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-      font-size: 16px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h4 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-
-    footer {
-      background: #0b0f1a;
-      color: #fff;
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>EdgeScale Systems</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Solutions</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<!-- Hero Section -->    <header class="py-16 px-6 max-w-7xl mx-auto text-center">
+    <h1 class="text-5xl font-extrabold mb-4 gradient-text">Edge Infrastructure & Components</h1>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+        Explore the ruggedized, high-performance hardware powering our AI-enabled edge ecosystems. 
+        Engineered for reliability in the harshest industrial environments.
+    </p>
 </header>
 
-<section class="hero">
-  <h2>AI-Enabled Edge Computing Platforms</h2>
-  <p>
-    We build rugged, high-performance edge computing systems powered by modern AI chips,
-    enabling businesses to process data locally, reduce latency, and scale faster.
-  </p>
-</section>
+<!-- Gallery Grid -->
+<main class="max-w-7xl mx-auto px-6 pb-24">
+            <!-- Category: Compute & Processing -->
+    <h2 class="text-xl font-semibold mb-8 border-l-4 border-cyan-500 pl-4">Core Processing & Memory</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        
+        <div class="glass-card rounded-xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=80&w=800" alt="AI Accelerator" class="w-full h-48 object-cover">
+            <div class="p-6">                    <span class="text-xs text-cyan-400 font-mono uppercase">Processing</span>
+                <h3 class="text-xl font-bold mt-2">Nvidia/Intel AI Modules</h3>
+                <p class="text-sm text-gray-400 mt-2">High-TFLOPS accelerators designed for real-time neural network inference at the edge.</p>
+            </div>
+        </div>
 
-<section class="section">
-  <h3>Edge Hardware Built for Real-World Environments</h3>
-  <p>
-    Our platforms integrate powerful Intel and NVIDIA processors, DDR5 memory,
-    NVMe SSD storage, and essential connectivity modules to deliver reliable AI
-    performance directly at the edge.
-  </p>
+        <div class="glass-card rounded-xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1540339832862-47452993c66e?auto=format&fit=crop&q=80&w=800" alt="DDR5 RAM" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <span class="text-xs text-cyan-400 font-mono uppercase">Memory</span>
+                <h3 class="text-xl font-bold mt-2">DDR5 High-Speed RAM</h3>
+                <p class="text-sm text-gray-400 mt-2">Ultra-low latency memory modules optimized for heavy data throughput and edge analytics.</p>
+            </div>
+        </div>
 
-  <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092334394-3a9d7e6c7b9a?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h4>Edge AI Gateways</h4>
-        <p>
-          Compact gateways designed for real-time AI inference, featuring
-          fanless designs and enterprise-grade components.
-        </p>
-      </div>
+        <div class="glass-card rounded-xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&q=80&w=800" alt="M.2 SSD" class="w-full h-48 object-cover">
+            <div class="p-6">                    <span class="text-xs text-cyan-400 font-mono uppercase">Storage</span>
+                <h3 class="text-xl font-bold mt-2">NVMe M.2 Industrial SSDs</h3>
+                <p class="text-sm text-gray-400 mt-2">Fast, vibration-resistant storage with enhanced thermal management for local data logging.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1555617980-2c8e1a6cba03?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h4>Sensors & Vision Systems</h4>
-        <p>
-          Integrated cameras and sensors optimized for local processing in
-          industrial, retail, and smart infrastructure deployments.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h4>Rugged Mini-Servers</h4>
-        <p>
-          Sealed, fanless mini-servers engineered to operate reliably in harsh
-          environments with minimal maintenance.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091215367-59ab6c0d7f44?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h4>Connectivity & Integration</h4>
-        <p>
-          Built-in Wi-Fi, Ethernet, and cellular connectivity ensures secure
-          communication while keeping intelligence close to the data source.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h3>Why Edge AI Matters</h3>
-  <p>
-    Processing data locally improves response time, enhances data privacy,
-    and reduces cloud costs. Our edge systems are designed to support
-    continuous operation across mission-critical environments.
-  </p>
-</section>
-
-<footer>
-  © 2025 EdgeScale Systems — Engineered for the Intelligent Edge
-</footer>
-
-</body>
-</html>
-
+    <!-- Category: Ruggedized Systems -->
+    <h2 class="text-xl font-semibold mb-8 border-l-
