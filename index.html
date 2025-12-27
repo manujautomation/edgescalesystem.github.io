@@ -6,6 +6,10 @@
   <title>Edge Scale System</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -20,6 +24,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header h1 {
@@ -34,9 +41,13 @@
       font-size: 14px;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .hero {
       background: linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url("https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80");
+        url("https://source.unsplash.com/1600x900/?edge-computing,technology");
       background-size: cover;
       background-position: center;
       color: white;
@@ -123,14 +134,14 @@
 <header>
   <h1>Edge Scale System</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Solutions</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <h2>AI-Powered Edge Computing Systems</h2>
   <p>
     We design and build rugged, AI-enabled edge computing platforms that allow
@@ -139,29 +150,29 @@
   </p>
 </section>
 
-<section class="section">
+<section class="section" id="solutions">
   <h3>What We Build</h3>
   <p>
     Our edge computing solutions combine high-performance processors, modern
     memory and storage technologies, and reliable connectivity — all packaged
-    into ruggedized hardware designed for harsh, real-world deployments.
+    into ruggedized hardware designed for real-world deployments.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <img src="https://www.inonet.com/wp-content/uploads/2023/11/Edge-AI-Computing-Grafik-845x684.jpg?auto=format&fit=crop&w=1200&q=80" alt="Edge AI Gateway">
+      <img src="https://source.unsplash.com/800x600/?server,ai" alt="Edge AI Gateway">
       <div class="card-content">
         <h4>Edge Scale System</h4>
         <p>
-          Compact and powerful gateways featuring Intel and NVIDIA processors,
-          DDR5 memory, and NVMe SSD storage for real-time inference at the edge.
+          Compact and powerful gateways featuring modern CPUs and GPUs,
+          high-speed memory, and NVMe storage for real-time inference.
         </p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://www.ids-imaging.us/files/images/support/knowledgebase/technical-articles/at-technology-day-sensoric/ids-industrial-cameras-small-fast-smart.jpg?auto=format&fit=crop&w=1200&q=80" alt="Industrial Sensors">
+      <img src="https://source.unsplash.com/800x600/?industrial,sensors" alt="Industrial Sensors">
       <div class="card-content">
         <h4>Industrial Sensors & Cameras</h4>
         <p>
@@ -172,7 +183,7 @@
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1200&q=80" alt="Mini Server">
+      <img src="https://source.unsplash.com/800x600/?mini-server,hardware" alt="Mini Server">
       <div class="card-content">
         <h4>Rugged Mini-Servers</h4>
         <p>
@@ -183,7 +194,7 @@
     </div>
 
     <div class="card">
-      <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/22606/images/27e2cca-def8-0fd8-f24-203b03e7b6d7_2ff28fd515fc8465d5c90d34b8ed94be.jpg?auto=format&fit=crop&w=1200&q=80" alt="Connectivity Modules">
+      <img src="https://source.unsplash.com/800x600/?network,connectivity" alt="Connectivity Modules">
       <div class="card-content">
         <h4>Connectivity & Integration</h4>
         <p>
@@ -196,13 +207,23 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="about">
   <h3>Why Edge Scale System?</h3>
   <p>
     Processing data locally near its source reduces latency, lowers bandwidth
     costs, improves privacy, and enables real-time decision-making. Our systems
-    are engineered for continuous operation in industrial, retail, healthcare,
-    and smart infrastructure environments.
+    are engineered for continuous operation across industrial, retail,
+    healthcare, and smart infrastructure environments.
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <h3>Contact Us</h3>
+  <p>
+    Interested in pilots, evaluations, or custom edge solutions?
+  </p>
+  <p>
+    📧 Email: <a href="mailto:info@edgescalesystem.com">info@edgescalesystem.com</a>
   </p>
 </section>
 
@@ -212,7 +233,3 @@
 
 </body>
 </html>
-
-
-
-
