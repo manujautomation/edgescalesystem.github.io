@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customize Your Edge Computer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+    }
+
+    header {
+      background: #0b0f1a;
+      color: #fff;
+      padding: 16px 40px;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 0 20px;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 340px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    details {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .option {
+      margin: 10px 0;
+    }
+
+    .option select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 5px;
+    }
+
+    .content {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 30px;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    .summary {
+      background: #f1f3f6;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .summary p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<div class="container">
+
+  <!-- LEFT CONFIG -->
+  <div class="sidebar">
+    <h3>Configure & Buy (Demo)</h3>
+
+    <details open>
+      <summary>Motherboard</summary>
+      <div class="option">
+        <select onchange="updateConfig('Motherboard', this.value)">
+          <option>Intel Atom x6000</option>
+          <option>Intel Core i5</option>
+          <option>Intel Core i7</option>
+        </select>
+      </div>
+    </details>
+
+    <details>
+      <summary>Memory</summary>
+      <div class="option">
+        <select onchange="updateConfig('Memory', this.value)">
+          <option>8 GB DDR4</option>
+          <option>16 GB DDR4</option>
+          <option>32 GB DDR4</option>
+        </select>
+      </div>
+    </details>
+
+    <details>
+      <summary>Primary Storage</summary>
+      <div class="option">
+        <select onchange="updateConfig('Primary Storage', this.value)">
+          <option>256 GB NVMe</option>
+          <option>512 GB NVMe</option>
+          <option>1 TB NVMe</option>
+        </select>
+      </div>
+    </details>
+
+    <details>
+      <summary>WiFi Connectivity</summary>
+      <div class="option">
+        <select onchange="updateConfig('WiFi', this.value)">
+          <option>None</option>
+          <option>WiFi 5</option>
+          <option>WiFi 6</option>
+        </select>
+      </div>
+    </details>
+
+    <details>
+      <summary>Operating System</summary>
+      <div class="option">
+        <select onchange="updateConfig('Operating System', this.value)">
+          <option>Ubuntu Linux</option>
+          <option>Windows IoT</option>
+          <option>No OS</option>
+        </select>
+      </div>
+    </details>
+
+    <details>
+      <summary>Power Supply</summary>
+      <div class="option">
+        <select onchange="updateConfig('Power Supply', this.value)">
+          <option>12V DC</option>
+          <option>24V DC</option>
+          <option>PoE+</option>
+        </select>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- RIGHT SUMMARY -->
+  <div class="content">
+    <h2>Your Sample Edge Configuration</h2>
+    <p>
+      This is a demonstration of how customers can explore configurable
+      options for an edge computing platform.
+    </p>
+
+    <div class="summary" id="summary"></div>
+  </div>
+
+</div>
+
+<script>
+  const config = {};
+
+  function updateConfig(key, value) {
+    config[key] = value;
+    renderSummary();
+  }
+
+  function renderSummary() {
+    let html = '';
+    for (let key in config) {
+      html += `<p><strong>${key}:</strong> ${config[key]}</p>`;
+    }
+    document.getElementById('summary').innerHTML = html;
+  }
+
+  // Initialize defaults
+  document.querySelectorAll('select').forEach(sel => {
+    const label = sel.closest('details').querySelector('summary').innerText;
+    updateConfig(label, sel.value);
+  });
+</script>
+
+</body>
+</html>
